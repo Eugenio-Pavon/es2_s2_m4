@@ -20,7 +20,11 @@ fetch("https://striveschool-api.herokuapp.com/books", {
         <div class="card-body">
            <p class="card-text">${titolo}</p>
            <h4>PREZZO: ${prezzi} $ </h4>
+          
+           
            <button class="tasto" onclick="aggiungiCarrello(event, '${titolo}')"> Aggiungi al carrello </button>
+           <button class="tasto2" onclick="togliCard(event)">salta</button>
+           <button class="dettagli-btn">  <a href="dettagli.html?id=${elementi.asin}">Dettagli</a> </button>
         </div>
        </div>
        </div>`;
@@ -36,4 +40,8 @@ function aggiungiCarrello(event, titolo) {
   const cartItem = document.createElement("div");
   cartItem.innerText = titolo;
   carrello.appendChild(cartItem);
+}
+function togliCard(event) {
+  const card = event.target.parentNode.parentNode;
+  card.style.display = "none";
 }

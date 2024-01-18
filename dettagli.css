@@ -1,0 +1,10 @@
+body {
+  background-color: rgb(167, 167, 239);
+}
+
+#details {
+  background-color: rgb(37, 37, 152);
+  color: white;
+  display: flex;
+  gap: 10px;
+}
